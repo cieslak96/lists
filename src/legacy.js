@@ -1,3 +1,4 @@
+import { getSession, saveSharedState } from './cloud.js';
 const STORAGE_KEY='little-list-v1';
 // Optional: paste a TMDB v3 API key here to enable movie and series search.
 window.TMDB_API_KEY = window.TMDB_API_KEY || '';
@@ -10,7 +11,7 @@ const initialLists=[
 ];
 let data=loadData(),activeListId=null,activeEntryId=null,activeSlide=0,searchTimer=null;
 function loadData(){try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));if(s&&Array.isArray(s.lists))return s}catch(e){}return{lists:structuredClone(initialLists)}}
-function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(data));document.querySelector('.sync-dot')?.classList.add('saved')}
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(data));document.querySelector('.sync-dot')?.classList.add('saved');const session=getSession();if(session?.access_token)saveSharedState(session.access_token,data).catch(()=>{document.querySelector('.sync-dot')?.classList.add('sync-error')})}
 function escapeHtml(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function listById(id){return data.lists.find(x=>x.id===id)}function entryById(){return listById(activeListId)?.entries.find(e=>e.id===activeEntryId)}
 function setRoute(listId=null,entryId=null){activeListId=listId;activeEntryId=entryId;render()}
