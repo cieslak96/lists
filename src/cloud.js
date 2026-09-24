@@ -1,6 +1,16 @@
 const SUPABASE_URL = 'https://ajnffmzpmydyyonedmip.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_t9WKteC9H_EvBBkOOl3yLg_BAcg3klH';
 const SESSION_KEY = 'little-list-session';
+const DATA_KEY = 'little-list-v1';
+
+function storeSession(session) {
+  try { localStorage.setItem(SESSION_KEY, JSON.stringify(session)); }
+  catch {
+    // The shared data is already stored in Supabase, so discard its local cache
+    // if that cache is preventing the smaller authentication session from saving.
+    try { localStorage.removeItem(DATA_KEY); localStorage.setItem(SESSION_KEY, JSON.stringify(session)); } catch {}
+  }
+}
 
 export function getSession() {
   try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; }
@@ -20,7 +30,7 @@ export async function authenticateEmail(email, password, createAccount = false) 
   if (createAccount && !result.access_token) return { confirmationRequired: true };
   if (!result.access_token) throw new Error('Não foi possível iniciar a sessão.');
   const session = { ...result, expires_at: result.expires_at || Math.floor(Date.now() / 1000) + (result.expires_in || 3600) };
-  localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+  storeSession(session);
   return session;
 }
 
@@ -34,7 +44,7 @@ export async function restoreSession() {
   const result = await response.json();
   if (!response.ok || !result.access_token) { localStorage.removeItem(SESSION_KEY); return null; }
   const renewed = { ...session, ...result, expires_at: result.expires_at || Math.floor(Date.now() / 1000) + (result.expires_in || 3600) };
-  localStorage.setItem(SESSION_KEY, JSON.stringify(renewed));
+  storeSession(renewed);
   return renewed;
 }
 

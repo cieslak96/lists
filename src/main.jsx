@@ -16,13 +16,20 @@ function App() {
 
   useEffect(() => {
     if (!session) return;
+    window.__LITTLE_LIST_SESSION__ = session;
     let cancelled = false;
     loadSharedState(session.access_token).then((shared) => {
       if (cancelled) return;
-      if (shared?.lists) localStorage.setItem('little-list-v1', JSON.stringify(shared));
-      else if (localStorage.getItem('little-list-v1')) {
-        const local = JSON.parse(localStorage.getItem('little-list-v1'));
-        return saveSharedState(session.access_token, local);
+      if (shared?.lists) {
+        window.__LITTLE_LIST_SHARED__ = shared;
+        try { localStorage.setItem('little-list-v1', JSON.stringify(shared)); }
+        catch { try { localStorage.removeItem('little-list-v1'); } catch {} }
+      } else {
+        let cached = null;
+        try { cached = JSON.parse(localStorage.getItem('little-list-v1')); } catch {}
+        if (cached?.lists) {
+          return saveSharedState(session.access_token, cached);
+        }
       }
     }).then(() => {
       if (!cancelled) import('./legacy.js');
