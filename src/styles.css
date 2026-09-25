@@ -28,3 +28,4 @@
 @media(max-width:700px){.relationship-caption{width:100%;text-align:left}}
 @media(min-width:701px){.home-heading{align-items:center}.relationship-caption{margin-top:0}}
 .topbar-right{margin-left:auto;flex:none}
+.collection-card.is-movie .collection-photo{object-fit:contain;background:#e9e9dc}
