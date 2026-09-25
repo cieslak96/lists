@@ -64,3 +64,4 @@
 .list-header-actions .list-icon-action{width:48px;height:48px;min-width:48px;padding:0;display:grid;place-items:center;border-radius:10px;font-size:21px}.list-header-actions .list-icon-action span{margin:0;font-size:25px;line-height:1}
 @media(max-width:700px){.list-header-actions{flex-direction:row;gap:7px}.list-header-actions .list-icon-action{width:44px;height:44px;min-width:44px}}
 @media(max-width:700px){.watch-queue-list{max-height:none;overflow:visible}}
+.movie-home-title{font:inherit;letter-spacing:inherit;color:inherit;text-align:left;padding:0;border:0;background:transparent;cursor:pointer}.movie-home-title:hover{color:var(--green)}.movie-home-title:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:3px}
