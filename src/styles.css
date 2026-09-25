@@ -49,3 +49,5 @@
 @media(max-width:700px){.collection-card.has-photo{aspect-ratio:.82;padding-top:66%}.collection-card.has-photo .collection-photo-wrap{height:66%}.collection-card.has-photo h3{margin-top:7px}}
 .collection-card.has-photo{aspect-ratio:.85;padding-top:88%;padding-bottom:12px}.collection-card.has-photo .collection-photo-wrap{height:75%}.collection-card.has-photo h3{margin:5px 0 2px}.collection-card.has-photo p{line-height:1.25}
 @media(max-width:700px){.collection-card.has-photo{aspect-ratio:.72;padding-top:104%;padding-bottom:9px}.collection-card.has-photo .collection-photo-wrap{height:75%}.collection-card.has-photo h3{font-size:16px;line-height:1.15;margin:4px 0 2px}.collection-card.has-photo p{font-size:10px;line-height:1.2}}
+.collection-card{aspect-ratio:.85}.collection-card.has-photo{aspect-ratio:.85}
+@media(max-width:700px){.collection-card{aspect-ratio:.72}.collection-card.has-photo{aspect-ratio:.72}}
