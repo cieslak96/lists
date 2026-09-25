@@ -65,3 +65,4 @@
 @media(max-width:700px){.list-header-actions{flex-direction:row;gap:7px}.list-header-actions .list-icon-action{width:44px;height:44px;min-width:44px}}
 @media(max-width:700px){.watch-queue-list{max-height:none;overflow:visible}}
 .movie-home-title{font:inherit;letter-spacing:inherit;color:inherit;text-align:left;padding:0;border:0;background:transparent;cursor:pointer}.movie-home-title:hover{color:var(--green)}.movie-home-title:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:3px}
+@media(max-width:700px){.list-heading{flex-wrap:wrap;align-items:center;row-gap:12px}.list-heading-copy{flex:1 1 calc(100% - 57px);min-width:0}.list-header-actions{width:100%;margin-left:57px}}
