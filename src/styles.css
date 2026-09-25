@@ -27,3 +27,5 @@
 @media(min-width:701px){.home-heading{align-items:center}.relationship-caption{margin-top:0}}
 .topbar-right{margin-left:auto;flex:none}
 .collection-card.is-movie .collection-photo{object-fit:cover}
+.mobile-list-nav{display:none}
+@media(max-width:700px){.sidebar{display:none}.mobile-menu{display:none!important}.mobile-list-nav{position:sticky;top:57px;z-index:3;display:flex;gap:7px;overflow-x:auto;overscroll-behavior-x:contain;padding:9px 16px;background:rgba(248,245,239,.97);border-bottom:1px solid var(--line);scrollbar-width:none}.mobile-list-nav::-webkit-scrollbar{display:none}.mobile-list-nav .side-link{flex:none;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:22px;background:var(--white);white-space:nowrap;gap:7px}.mobile-list-nav .side-link.active{border-color:#c4d0be;background:#e5e9df;color:var(--green)}.mobile-list-nav .side-link .nav-icon{width:auto}}

@@ -74,7 +74,8 @@ function App() {
         <div className="sidebar-bottom"><div className="avatar-pair"><span>Y</span><span>C</span></div><div><b>You &amp; Chris</b></div></div>
       </aside>
       <main className="main-content">
-        <header className="topbar"><button id="mobileMenu" className="icon-button mobile-menu" aria-label="Open navigation" aria-controls="sideNav" aria-expanded="false">☰</button><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button></div></header>
+        <header className="topbar"><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button></div></header>
+        <nav id="mobileNav" className="mobile-list-nav" aria-label="Your lists" />
         <section id="homeView" className="view" />
         <section id="listView" className="view hidden" />
         <section id="detailView" className="view hidden" />
