@@ -69,15 +69,14 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <section className="sidebar-landmarks" aria-labelledby="sidebarLandmarksTitle">
-          <h2 id="sidebarLandmarksTitle">Landmarks of our relationship</h2>
+          <div id="sidebarLandmarksTitle" className="sidebar-label">THE MOST IMPORTANT LIST</div>
           <div className="sidebar-landmark-links">
             <button type="button" data-milestone="hinge">Our first interaction: Hinge, Jun 24, 2026</button>
             <button type="button" data-milestone="dreamwalks">Our first date: Dreamwalks, Jul 08, 2026</button>
             <button type="button" data-milestone="dating">We started dating: Hurricane, Aug 23, 2026</button>
           </div>
         </section>
-        <nav id="sideNav" className="side-nav" aria-label="Your lists" />
-        <button className="nav-add" id="sidebarAdd"><span>＋</span> Create a list</button>
+        <nav id="sideNav" className="side-nav hidden" aria-label="Your lists" />
         <div className="sidebar-bottom"><div className="avatar-pair"><span>Y</span><span>C</span></div><div><b>You &amp; Chris</b></div></div>
       </aside>
       <main className="main-content">
