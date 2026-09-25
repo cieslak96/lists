@@ -53,3 +53,5 @@
 @media(max-width:700px){.collection-card{aspect-ratio:.72}.collection-card.has-photo{aspect-ratio:.72}}
 .collection-card{aspect-ratio:1}.collection-card.has-photo{aspect-ratio:1;padding-top:75%}.collection-card.has-photo .collection-photo-wrap{height:75%}
 @media(max-width:700px){.collection-card,.collection-card.has-photo{aspect-ratio:1}.collection-card.has-photo{padding-top:75%}.collection-card.has-photo .collection-photo-wrap{height:75%}}
+.collection-card h3{font:600 24px/1.12 var(--serif);letter-spacing:-.45px;color:var(--ink)}.side-link{font:500 14px/1.3 var(--sans);letter-spacing:.05px}.side-link.active{font-weight:650}
+@media(max-width:700px){.collection-card h3{font-size:20px}.collection-card.has-photo h3{font-size:19px;line-height:1.12}.mobile-list-nav .side-link{font-size:14px}}
