@@ -61,3 +61,5 @@
 .movie-workspace.has-queue{grid-template-columns:minmax(0,1fr)}.movie-workspace.has-queue .movie-category-content{display:none}.movie-workspace.has-queue .watch-queue{position:static;width:min(100%,760px);margin:0 auto}
 .watch-order-controls{display:none}
 @media(max-width:700px){.watch-queue-item{display:block;touch-action:pan-y}.watch-queue-item.is-touch-dragging{position:relative;z-index:2;background:#e9eee5;box-shadow:0 6px 18px #2529232b;color:var(--green)}.watch-queue-item.is-drop-target{border-top:2px solid var(--green)}}
+.list-header-actions .list-icon-action{width:48px;height:48px;min-width:48px;padding:0;display:grid;place-items:center;border-radius:10px;font-size:21px}.list-header-actions .list-icon-action span{margin:0;font-size:25px;line-height:1}
+@media(max-width:700px){.list-header-actions{flex-direction:row;gap:7px}.list-header-actions .list-icon-action{width:44px;height:44px;min-width:44px}}
