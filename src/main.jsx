@@ -68,13 +68,12 @@ function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <div className="sidebar-label">YOUR SPACE</div>
         <nav id="sideNav" className="side-nav" aria-label="Your lists" />
         <button className="nav-add" id="sidebarAdd"><span>＋</span> Create a list</button>
         <div className="sidebar-bottom"><div className="avatar-pair"><span>Y</span><span>C</span></div><div><b>You &amp; Chris</b><small>A little corner of the internet</small></div><span className="heart">♥</span></div>
       </aside>
       <main className="main-content">
-        <header className="topbar"><button id="mobileMenu" className="icon-button mobile-menu" aria-label="Open navigation" aria-controls="sideNav" aria-expanded="false">☰</button><div className="breadcrumb"><span>OUR SPACE</span><span className="crumb-slash">/</span><b id="crumbCurrent">ALL LISTS</b></div><div className="topbar-right"><span className="sync-dot" /><span>Shared lists</span><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button></div></header>
+        <header className="topbar"><button id="mobileMenu" className="icon-button mobile-menu" aria-label="Open navigation" aria-controls="sideNav" aria-expanded="false">☰</button><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button></div></header>
         <section id="homeView" className="view" />
         <section id="listView" className="view hidden" />
         <section id="detailView" className="view hidden" />
