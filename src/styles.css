@@ -57,3 +57,4 @@
 @media(max-width:700px){.collection-card h3{font-size:21px}.collection-card.has-photo h3{font-size:20px}.mobile-list-nav .side-link{font-size:15px}}
 .collection-card:not(.has-photo):not(.add-card){padding-top:75%}.collection-card:not(.has-photo):not(.add-card) .card-top{position:absolute;inset:0 0 auto;height:75%;padding:17px;background:#eeece4}.collection-card:not(.has-photo):not(.add-card) .collection-emoji{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:22px;font-size:39px}.collection-card:not(.has-photo):not(.add-card) h3{margin:5px 0 2px}
 @media(max-width:700px){.collection-card:not(.has-photo):not(.add-card){padding-top:75%}.collection-card:not(.has-photo):not(.add-card) .card-top{height:75%;padding:12px}.collection-card:not(.has-photo):not(.add-card) .collection-emoji{width:62px;height:62px;border-radius:18px;font-size:32px}}
+.movie-workspace.filtered{grid-template-columns:minmax(0,1fr)}
