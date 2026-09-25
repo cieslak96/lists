@@ -68,6 +68,7 @@ function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
+        <div className="sidebar-label">YOUR LISTS</div>
         <nav id="sideNav" className="side-nav" aria-label="Your lists" />
         <button className="nav-add" id="sidebarAdd"><span>＋</span> Create a list</button>
         <div className="sidebar-bottom"><div className="avatar-pair"><span>Y</span><span>C</span></div><div><b>You &amp; Chris</b></div></div>
