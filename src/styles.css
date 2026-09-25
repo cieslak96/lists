@@ -74,3 +74,4 @@
 .movie-category-picker summary::after{content:'⌄';position:absolute;right:10px;top:5px;color:#81847a}.movie-category-picker[open] summary::after{content:'⌃'}
 .entry-art>.image-cover{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
 .sidebar-landmarks{margin:0 0 22px}.sidebar-landmark-links{display:grid;gap:4px;padding:0 10px}.sidebar-landmark-links button{padding:5px 0;border:0;background:transparent;color:#73786e;text-align:left;font:9px/1.45 var(--mono);letter-spacing:.1px}.sidebar-landmark-links button:hover{color:var(--green);text-decoration:underline;text-underline-offset:2px}
+.sidebar-landmarks .sidebar-label{font:10px var(--mono);letter-spacing:1.5px}.mobile-list-nav .mobile-milestone-link{font:10px/1.45 var(--mono);letter-spacing:.4px;color:#73786e}
