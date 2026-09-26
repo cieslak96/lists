@@ -99,3 +99,5 @@
 @media(max-width:700px){.poster-copy{width:100%;grid-template-columns:minmax(0,1fr) 44px;column-gap:12px}}
 .poster-placeholder{background:transparent}.poster-placeholder:not(:has(img)){background:#d8dfd0}.poster-placeholder img{display:block;width:100%;height:100%;object-fit:cover;background:transparent}
 .sidebar-landmarks .sidebar-label,.sidebar-landmark-add,.mobile-landmarks-toggle,.mobile-list-nav .mobile-landmarks-menu .mobile-add-landmark{color:var(--green)}.add-card strong{color:var(--green)}
+.home-couple-footer{display:none}
+@media(max-width:700px){.home-couple-footer{display:flex;align-items:center;justify-content:center;gap:11px;margin:35px 0 4px;padding-top:18px;border-top:1px solid var(--line);color:#555b51;font:12px var(--sans);font-weight:600}.home-couple-footer .avatar-pair{gap:6px;padding:0}.home-couple-footer .avatar-pair .sidebar-profile-avatar{width:34px;height:34px;margin:0;border:0;border-radius:50%}}
