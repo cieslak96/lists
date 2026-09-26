@@ -74,13 +74,14 @@ function App() {
           <button type="button" className="sidebar-landmark-add" data-add-landmark>＋ Add landmark</button>
         </section>
         <nav id="sideNav" className="side-nav hidden" aria-label="Your lists" />
-        <div className="sidebar-bottom"><div className="avatar-pair"><span>Y</span><span>C</span></div><div><b>You &amp; Chris</b></div></div>
+        <button type="button" className="sidebar-bottom" id="profileSidebarButton" aria-label="Open profiles"><div className="avatar-pair" id="sidebarProfileAvatars" /><div><b id="sidebarProfileNames">Angela &amp; Chris</b></div></button>
       </aside>
       <main className="main-content">
-        <header className="topbar"><nav id="mobileNav" className="mobile-list-nav" aria-label="Relationship landmarks" /><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button></div></header>
+        <header className="topbar"><nav id="mobileNav" className="mobile-list-nav" aria-label="Relationship landmarks" /><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button><button type="button" className="profile-avatar-button" id="profileToggle" aria-label="Open your profile" /></div></header>
         <section id="homeView" className="view" />
         <section id="listView" className="view hidden" />
         <section id="detailView" className="view hidden" />
+        <section id="profileView" className="view hidden" />
       </main>
       <div id="modalRoot" />
       <div id="toast" className="toast" />
