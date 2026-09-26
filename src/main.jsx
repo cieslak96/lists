@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { authenticateEmail, loadSharedState, restoreSession, saveSharedState, signOut } from './cloud.js';
+import { authenticateEmail, loadSharedState, restoreSession, saveSharedState } from './cloud.js';
 import './styles.css';
 
 function App() {
@@ -77,7 +77,7 @@ function App() {
         <button type="button" className="sidebar-bottom" id="profileSidebarButton" aria-label="Open profiles"><div className="avatar-pair" id="sidebarProfileAvatars" /><div><b id="sidebarProfileNames">Angela &amp; Chris</b></div></button>
       </aside>
       <main className="main-content">
-        <header className="topbar"><nav id="mobileNav" className="mobile-list-nav" aria-label="Relationship landmarks" /><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button className="auth-signout" onClick={() => { signOut(); window.location.reload(); }}>Sign out</button><button type="button" className="profile-avatar-button" id="profileToggle" aria-label="Open your profile" /></div></header>
+        <header className="topbar"><nav id="mobileNav" className="mobile-list-nav" aria-label="Relationship landmarks" /><div className="topbar-right"><button className="icon-button" id="searchToggle" aria-label="Search">⌕</button><button type="button" className="profile-avatar-button" id="profileToggle" aria-label="Open your profile" /></div></header>
         <section id="homeView" className="view" />
         <section id="listView" className="view hidden" />
         <section id="detailView" className="view hidden" />
