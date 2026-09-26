@@ -71,7 +71,7 @@ function App() {
         <section className="sidebar-landmarks" aria-labelledby="sidebarLandmarksTitle">
           <div id="sidebarLandmarksTitle" className="sidebar-label">THE MOST IMPORTANT LIST</div>
           <div id="sidebarLandmarkLinks" className="sidebar-landmark-links" />
-          <button type="button" className="sidebar-landmark-add icon-only-action" data-add-landmark aria-label="Add landmark" title="Add landmark"><span className="action-plus" aria-hidden="true">＋</span></button>
+          <button type="button" className="sidebar-landmark-add" data-add-landmark>Add landmark</button>
         </section>
         <nav id="sideNav" className="side-nav hidden" aria-label="Your lists" />
         <button type="button" className="sidebar-bottom" id="profileSidebarButton" aria-label="Open profiles"><div className="avatar-pair" id="sidebarProfileAvatars" /><div><b id="sidebarProfileNames">Angela &amp; Chris</b></div></button>
