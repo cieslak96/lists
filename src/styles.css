@@ -97,3 +97,4 @@
 .poster-copy [data-edit]{display:grid;margin:11px 0 0 auto}
 .poster-copy{display:grid;grid-template-columns:minmax(0,1fr) 48px;align-items:center;column-gap:20px}.poster-copy .date-line,.poster-copy h2,.poster-copy p{grid-column:1}.poster-copy [data-edit]{grid-column:2;grid-row:1/4;align-self:center;justify-self:end;margin:0}
 @media(max-width:700px){.poster-copy{width:100%;grid-template-columns:minmax(0,1fr) 44px;column-gap:12px}}
+.poster-placeholder{background:transparent}.poster-placeholder:not(:has(img)){background:#d8dfd0}.poster-placeholder img{display:block;width:100%;height:100%;object-fit:cover;background:transparent}
